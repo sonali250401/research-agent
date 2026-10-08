@@ -1,14 +1,3 @@
----
-title: ResearchBot Agent
-emoji: 🤖
-colorFrom: indigo
-colorTo: purple
-sdk: docker
-pinned: false
-license: mit
-app_port: 7860
----
-
 # ResearchBot — LangGraph Research Agent
 
 A production-grade AI research assistant built with all 9 architectural tasks:
