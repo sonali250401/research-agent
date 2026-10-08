@@ -18,10 +18,18 @@ def _clean_str(val: str) -> str:
     return val.strip().strip("'\"") if val else ""
 
 
+def _groq_model() -> str:
+    """Use the current model when an older deployment setting is still present."""
+    configured = os.getenv("GROQ_MODEL", "").strip()
+    if not configured or configured == "llama-3.3-70b-versatile":
+        return "openai/gpt-oss-120b"
+    return configured
+
+
 class Config:
     # ── LLM providers ──────────────────────────────────────────────────────────
     GROQ_API_KEY: str = _clean_str(os.getenv("GROQ_API_KEY", ""))
-    GROQ_MODEL: str = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile").strip()
+    GROQ_MODEL: str = _groq_model()
 
     GEMINI_API_KEY: str = _clean_str(os.getenv("GEMINI_API_KEY", ""))
     GEMINI_MODEL: str = os.getenv("GEMINI_MODEL", "gemini-1.5-flash").strip()
