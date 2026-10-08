@@ -232,12 +232,20 @@ Suggested captions:
 - Add stronger citation verification and source deduplication.
 - Add retry/backoff policies for external APIs.
 - Replace the in-memory async job store with Redis or a database.
-- Add a public hosted deployment URL.
 
 ## 10. Project Links
 
 **GitHub repository:**  
 https://github.com/sonali250401/research-agent
+
+**Live deployed application:**  
+https://research-agent-igk9.onrender.com/
+
+**Live health check:**  
+https://research-agent-igk9.onrender.com/health
+
+**Live API documentation:**  
+https://research-agent-igk9.onrender.com/docs
 
 **Local project URL:**  
 http://127.0.0.1:8080/
@@ -245,9 +253,10 @@ http://127.0.0.1:8080/
 **Local API documentation:**  
 http://127.0.0.1:8080/docs
 
-The local URLs work only while the server is running on the development
-computer. A public URL should be added here after deploying the Docker image
-to Render or Hugging Face Spaces.
+The deployed service was verified successfully. Its health endpoint returned
+HTTP 200 with the response `{"status":"healthy","service":"researchbot",
+"version":"1.0.0"}`. The local URLs work only while the server is running on
+the development computer.
 
 ## 11. Conclusion
 
