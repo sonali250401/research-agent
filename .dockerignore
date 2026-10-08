@@ -1,0 +1,10 @@
+.env
+.env.*
+__pycache__/
+*.py[cod]
+*.sqlite
+*.sqlite-*
+*.log
+eval_report.json
+.git/
+.gitignore

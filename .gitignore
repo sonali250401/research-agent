@@ -1,0 +1,11 @@
+.env
+*.sqlite
+*.sqlite-*
+*.log
+*.json
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+local_doc_store.json
+eval_report.json
